@@ -150,6 +150,7 @@ button:focus-visible {
   max-width: 64rem;
   margin: 0 auto;
   padding: 4.5rem 1.25rem 4rem;
+  text-align: center;
 }
 
 .eyebrow {
@@ -169,12 +170,13 @@ button:focus-visible {
   font-size: 1.05rem;
   color: var(--muted);
   max-width: 34rem;
-  margin-bottom: 2rem;
+  margin: 0 auto 2rem;
 }
 
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 0.75rem;
 }
 
@@ -186,6 +188,11 @@ button:focus-visible {
   font-size: 1rem;
   text-decoration: none;
   border: 1px solid transparent;
+  transition: background-color 0.15s ease, transform 0.15s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
 }
 
 .btn-primary {
@@ -227,6 +234,11 @@ button:focus-visible {
   margin-right: auto;
 }
 
+.section .eyebrow,
+.section h2 {
+  text-align: center;
+}
+
 .section h2 {
   font-size: clamp(1.5rem, 4.5vw, 2.2rem);
   margin-bottom: 1.25rem;
@@ -236,7 +248,7 @@ button:focus-visible {
   font-size: 1.05rem;
   color: var(--muted);
   max-width: 38rem;
-  margin-left: 0;
+  text-align: center;
 }
 
 .section-alt {
@@ -248,10 +260,11 @@ button:focus-visible {
 .section-dark {
   background: var(--accent);
   color: #fff;
+  text-align: center;
 }
 
 .section-dark .eyebrow {
-  color: #fff;
+  color: #d8e6de;
 }
 
 .section-dark .section-lead {
@@ -271,7 +284,8 @@ button:focus-visible {
   background: #fff;
   border: 1px solid var(--line);
   border-radius: 12px;
-  padding: 1.5rem;
+  padding: 1.75rem 1.5rem;
+  box-shadow: 0 1px 3px rgba(26, 26, 26, 0.05);
 }
 
 .card h3 {
@@ -297,6 +311,7 @@ button:focus-visible {
   border: 1px solid var(--line);
   border-radius: 12px;
   padding: 2rem 1.5rem;
+  box-shadow: 0 1px 3px rgba(26, 26, 26, 0.05);
 }
 
 .service-tag {
@@ -337,6 +352,7 @@ button:focus-visible {
 .service-upcoming {
   background: transparent;
   border-style: dashed;
+  box-shadow: none;
 }
 
 /* Footer */
