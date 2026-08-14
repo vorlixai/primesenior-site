@@ -534,6 +534,41 @@ button:focus-visible {
   outline-color: var(--bg);
 }
 
+.footer-social {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-social a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #c9c5bc;
+  text-decoration: none;
+  border: 1px solid #3a3a36;
+  border-radius: 999px;
+  padding: 0.5rem 1.1rem;
+  font-size: 0.9rem;
+}
+
+.footer-social a:hover {
+  color: var(--bg);
+  border-color: var(--bg);
+}
+
+.footer-social a:focus-visible {
+  outline-color: var(--bg);
+}
+
+.social-icon {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
 .footer-copy {
   font-size: 0.85rem;
 }
