@@ -1,0 +1,339 @@
+/* Event pages — extends rebom.css. Same teal accent, no new hues.
+   Contrast: #10534f on #faf9f6 8.4:1 / on #fff 8.9:1 · #fff on #10534f 8.9:1
+   · #faf9f6 on #0c3936 12.1:1 · #cfe3de on #0c3936 9.5:1 · #4a4a45 on #faf9f6 8.5:1. */
+
+.hero-compact {
+  padding-bottom: 3rem;
+}
+
+.hero-note {
+  margin-top: 1.5rem;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+.hero-note a {
+  color: var(--accent);
+}
+
+/* Fact row */
+.fact-row {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  max-width: 46rem;
+  margin: 0 auto 2.25rem;
+  text-align: left;
+}
+
+.fact-row li {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1rem 1.1rem;
+  box-shadow: 0 1px 3px rgba(12, 57, 54, 0.05);
+}
+
+.fact-label {
+  display: block;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+.fact-value {
+  display: block;
+  font-size: 0.97rem;
+  font-weight: 600;
+  line-height: 1.55;
+}
+
+/* Three-up cards */
+.card-grid.three {
+  grid-template-columns: 1fr;
+}
+
+/* Timeline */
+.timeline {
+  list-style: none;
+  max-width: 40rem;
+  margin-top: 2.25rem;
+  display: grid;
+  gap: 0;
+}
+
+.timeline li {
+  display: grid;
+  grid-template-columns: 4.2rem 1fr;
+  gap: 1rem;
+  padding: 1.15rem 0;
+  border-top: 1px solid var(--line);
+  text-align: left;
+}
+
+.timeline li:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.tl-time {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.05rem;
+  color: var(--accent);
+  padding-top: 0.1rem;
+}
+
+.tl-body h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.25rem;
+}
+
+.tl-body p {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.tl-highlight .tl-body h3 {
+  color: var(--accent);
+}
+
+.tl-highlight .tl-body h3::after {
+  content: "";
+  display: block;
+  width: 2rem;
+  height: 2px;
+  background: var(--accent);
+  margin-top: 0.4rem;
+}
+
+/* Callout */
+.callout {
+  max-width: 40rem;
+  margin-top: 2.5rem;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--accent);
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.callout h3 {
+  font-size: 1.05rem;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.callout p {
+  color: var(--muted);
+  font-size: 0.97rem;
+}
+
+.callout-plain {
+  background: var(--tint);
+}
+
+/* Check list (used on dark sections) */
+.check-list {
+  list-style: none;
+  max-width: 36rem;
+  margin: 2.25rem auto;
+  display: grid;
+  gap: 0.85rem;
+  text-align: left;
+}
+
+.check-list li {
+  position: relative;
+  padding-left: 1.9rem;
+  font-size: 1rem;
+}
+
+.check-list li::before {
+  content: "";
+  position: absolute;
+  left: 0.15rem;
+  top: 0.55rem;
+  width: 0.62rem;
+  height: 0.32rem;
+  border-left: 2px solid var(--dark-soft);
+  border-bottom: 2px solid var(--dark-soft);
+  transform: rotate(-45deg);
+}
+
+.section-dark .section-lead a {
+  color: var(--bg);
+}
+
+/* Info table */
+.info-table {
+  max-width: 40rem;
+  margin-top: 2.25rem;
+  text-align: left;
+}
+
+.info-table > div {
+  display: grid;
+  grid-template-columns: 5rem 1fr;
+  gap: 1rem;
+  padding: 1.1rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.info-table > div:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.info-table dt {
+  font-weight: 600;
+  color: var(--accent);
+  font-size: 0.97rem;
+}
+
+.info-table dd {
+  font-size: 0.99rem;
+  line-height: 1.6;
+}
+
+.dd-note {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
+/* Sub heading */
+.sub-head {
+  max-width: 40rem;
+  margin: 3rem auto 1rem;
+  font-size: 1.15rem;
+  text-align: left;
+  color: var(--accent);
+}
+
+/* Pill list */
+.pill-list {
+  list-style: none;
+  max-width: 40rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.pill-list li {
+  border: 1px solid var(--line);
+  background: #fff;
+  border-radius: 999px;
+  padding: 0.5rem 1.1rem;
+  font-size: 0.93rem;
+  color: var(--muted);
+}
+
+/* Application fields */
+.field-list {
+  list-style: none;
+  max-width: 34rem;
+  margin-top: 2.25rem;
+  display: grid;
+  gap: 0;
+  text-align: left;
+}
+
+.field-list li {
+  display: grid;
+  grid-template-columns: 2.2rem 1fr;
+  gap: 0.85rem;
+  align-items: baseline;
+  padding: 1rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.field-list li:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.field-num {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.1rem;
+  color: var(--accent);
+}
+
+.field-list h3 {
+  font-size: 1.02rem;
+}
+
+.field-list p {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-top: 0.2rem;
+}
+
+/* Apply panel */
+.apply-panel {
+  max-width: 34rem;
+  margin-top: 2.5rem;
+  background: var(--tint);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+}
+
+.apply-panel h3 {
+  font-size: 1.15rem;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.apply-panel > p {
+  color: var(--muted);
+  font-size: 0.97rem;
+  margin-bottom: 1.5rem;
+}
+
+.apply-alt {
+  margin-top: 1.25rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.apply-alt strong {
+  color: var(--accent);
+}
+
+/* Embedded form (used once a form URL is wired in) */
+.form-embed {
+  width: 100%;
+  max-width: 40rem;
+  margin-top: 2.5rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+  min-height: 40rem;
+}
+
+@media (min-width: 48rem) {
+  .fact-row {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+
+  .card-grid.three {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+
+  .timeline li {
+    grid-template-columns: 5.5rem 1fr;
+    gap: 1.5rem;
+  }
+
+  .info-table > div {
+    grid-template-columns: 7rem 1fr;
+  }
+
+  .apply-panel {
+    padding: 2.25rem 2rem;
+  }
+}
