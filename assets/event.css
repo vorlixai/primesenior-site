@@ -346,11 +346,12 @@
   color: var(--accent);
 }
 
-/* Embedded form (used once a form URL is wired in) */
+/* Embedded form */
 .form-embed {
+  display: block;
   width: 100%;
-  max-width: 40rem;
-  margin-top: 2.5rem;
+  max-width: 42rem;
+  margin: 2.5rem auto 0;
   border: 1px solid var(--line);
   border-radius: 12px;
   background: #fff;
