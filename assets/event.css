@@ -16,6 +16,18 @@
   color: var(--accent);
 }
 
+.status-badge {
+  display: inline-block;
+  background: #fff;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  border-radius: 999px;
+  padding: 0.35rem 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
 /* Fact row */
 .fact-row {
   list-style: none;
@@ -30,6 +42,7 @@
 .fact-row li {
   background: #fff;
   border: 1px solid var(--line);
+  border-top: 3px solid var(--accent);
   border-radius: 12px;
   padding: 1rem 1.1rem;
   box-shadow: 0 1px 3px rgba(12, 57, 54, 0.05);
@@ -61,21 +74,44 @@
   list-style: none;
   max-width: 40rem;
   margin-top: 2.25rem;
-  display: grid;
-  gap: 0;
+  position: relative;
+  padding-left: 1.7rem;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: calc(0.38rem - 1px);
+  top: 1.4rem;
+  bottom: 1.4rem;
+  width: 2px;
+  background: var(--line);
 }
 
 .timeline li {
   display: grid;
   grid-template-columns: 4.2rem 1fr;
   gap: 1rem;
-  padding: 1.15rem 0;
-  border-top: 1px solid var(--line);
+  padding: 1.05rem 0;
+  position: relative;
   text-align: left;
 }
 
-.timeline li:last-child {
-  border-bottom: 1px solid var(--line);
+.timeline li::before {
+  content: "";
+  position: absolute;
+  left: -1.7rem;
+  top: 1.32rem;
+  width: 0.76rem;
+  height: 0.76rem;
+  border-radius: 50%;
+  background: var(--tint);
+  border: 2px solid var(--accent);
+  box-sizing: border-box;
+}
+
+.timeline li.tl-highlight::before {
+  background: var(--accent);
 }
 
 .tl-time {
@@ -164,6 +200,14 @@
 }
 
 .section-dark .section-lead a {
+  color: var(--bg);
+}
+
+.section-dark .hero-note {
+  color: var(--dark-soft);
+}
+
+.section-dark .hero-note a {
   color: var(--bg);
 }
 
