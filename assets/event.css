@@ -346,6 +346,129 @@
   color: var(--accent);
 }
 
+/* Gallery — horizontal scroll-snap strip, no autoplay */
+.gallery {
+  margin-top: 2.25rem;
+}
+
+.gallery-track {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding: 0 0 0.5rem;
+}
+
+.gallery-track::-webkit-scrollbar {
+  display: none;
+}
+
+.gallery-track:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 4px;
+  border-radius: 14px;
+}
+
+.gallery-item {
+  flex: 0 0 86%;
+  scroll-snap-align: center;
+}
+
+.gallery-item figure {
+  margin: 0;
+}
+
+.gallery-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--tint);
+}
+
+.gallery-item figcaption {
+  margin-top: 0.85rem;
+  font-size: 0.93rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+.gallery-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.gallery-btn {
+  width: 2.9rem;
+  height: 2.9rem;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--accent);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  padding: 0 0 0.15rem;
+}
+
+.gallery-btn:hover:not(:disabled) {
+  border-color: var(--accent);
+}
+
+.gallery-btn:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.gallery-dots {
+  list-style: none;
+  display: flex;
+  gap: 0.55rem;
+  margin: 0;
+  padding: 0;
+}
+
+.gallery-dot {
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+
+.gallery-dot::before {
+  content: "";
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: var(--line);
+}
+
+.gallery-dot[aria-current="true"]::before {
+  background: var(--accent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gallery-track {
+    scroll-behavior: auto;
+  }
+}
+
 /* Embedded form */
 .form-embed {
   display: block;
@@ -380,5 +503,9 @@
 
   .apply-panel {
     padding: 2.25rem 2rem;
+  }
+
+  .gallery-item {
+    flex: 0 0 26rem;
   }
 }

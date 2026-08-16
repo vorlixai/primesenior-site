@@ -1,2 +1,5 @@
 .claude/
 .DS_Store
+
+# 원본 이미지는 로컬에만 보관, 배포에는 최적화본만 사용
+photos/*.png
