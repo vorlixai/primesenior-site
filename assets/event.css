@@ -378,10 +378,6 @@
   scroll-snap-align: center;
 }
 
-.gallery-item figure {
-  margin: 0;
-}
-
 .gallery-item img {
   display: block;
   width: 100%;
@@ -391,13 +387,6 @@
   border: 1px solid var(--line);
   border-radius: 12px;
   background: var(--tint);
-}
-
-.gallery-item figcaption {
-  margin-top: 0.85rem;
-  font-size: 0.93rem;
-  color: var(--muted);
-  text-align: center;
 }
 
 .gallery-controls {
